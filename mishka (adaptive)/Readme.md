@@ -1,4 +1,4 @@
-aliciaketzueki.github.io/mishka%20(adaptive)
+https://aliciaketzueki.github.io/mishka%20(adaptive)/
 
 * Студент: [Екатерина Мартова](https://up.htmlacademy.ru/adaptive/14/user/600361).
 * Наставник: [Руслан Князев](https://up.htmlacademy.ru/adaptive/14/user/208301).
