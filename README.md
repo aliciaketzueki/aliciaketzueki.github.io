@@ -21,6 +21,6 @@
 ![Nerds - index](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/nerds-index.jpg)
 ![Nerds - catalog](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/nerds-catalog.jpg)
 ---
-Самостоятельный проект по макетам HTML Academy:
-Nёrds, фиксированная верстка
+> Самостоятельный проект по макетам HTML Academy:
+> Nёrds, фиксированная верстка
 -----------------------------------
