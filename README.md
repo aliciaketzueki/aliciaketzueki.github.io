@@ -9,8 +9,6 @@
 + [Mishka (adaptive)](#Mishka);
 + [Nerds (fix)](#Nerds);
 
-***
-
 
 <a name="Sedona"></a> Sedona (fix)
 ------------
