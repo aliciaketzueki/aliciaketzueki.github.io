@@ -1,9 +1,10 @@
 Sedona (fix)
 ------------
 
-Выпускной проект интенсива "HTML и CSS, 1 уровень" от HTML Academy (финальная проверка - 100%): Седона (фиксированная версия).
+Выпускной проект интенсива "HTML и CSS, 1 уровень" от HTML Academy (финальная проверка - 100%): Седона (фиксированная версия):
 
       https://aliciaketzueki.github.io/sedona%20(fix)/
+
 
 ![Sedona - index](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/sedona-index-1200.jpg)
 ![Sedona - hotels](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/sedona-hotels-1200.jpg)
@@ -14,9 +15,10 @@ Sedona (fix)
 Mishka (adaptive)
 ------------
 
-Выпускной проект интенсива "HTML и CSS, 2 уровень" от HTML Academy (финальная проверка - 100%): Мишка (адаптивная версия).
+Выпускной проект интенсива "HTML и CSS, 2 уровень" от HTML Academy (финальная проверка - 100%): Мишка (адаптивная версия):
 
       https://aliciaketzueki.github.io/mishka%20(adaptive)/index.html
+
 
 ![Mishka - index](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/mishka-index-desktop.jpg)
 ![Mishka - catalog](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/mishka-catalog-desktop.jpg)
@@ -28,9 +30,10 @@ Mishka (adaptive)
 Nerds (fix)
 ------------
 
-Самостоятельный проект по макетам HTML Academy: Nёrds (фиксированная версия).
+Самостоятельный проект по макетам HTML Academy: Nёrds (фиксированная версия):
 
       https://aliciaketzueki.github.io/nerds%20(fix)/index.html
+
 
 ![Nerds - index](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/nerds-index.jpg)
 ![Nerds - catalog](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/nerds-catalog.jpg)
