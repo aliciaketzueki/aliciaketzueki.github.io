@@ -15,6 +15,7 @@ Mishka (adaptive)
 ------------
 
 > https://aliciaketzueki.github.io/mishka%20(adaptive)/index.html
+
 ![Mishka - index](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/mishka-index-desktop.jpg)
 ![Mishka - catalog](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/mishka-catalog-desktop.jpg)
 ![Mishka - form](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/mishka-form-desktop.jpg)
@@ -28,6 +29,7 @@ Nerds (fix)
 ------------
 
 > https://aliciaketzueki.github.io/nerds%20(fix)/index.html
+
 ![Nerds - index](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/nerds-index.jpg)
 ![Nerds - catalog](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/nerds-catalog.jpg)
 
