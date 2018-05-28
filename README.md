@@ -1,8 +1,13 @@
 Портфолио
 =============================
 
+Здесь будут выкладываться мои работы
++ [Sedona (fix)](#Sedona);
++ [Mishka (adaptive)](#Mishka);
++ [Nerds (fix)](#Nerds);
 
-Sedona (fix)
+
+<a name="Sedona"></a> Sedona (fix)
 ------------
 
 Выпускной проект интенсива "HTML и CSS, 1 уровень" от HTML Academy (финальная проверка - 100%): Седона (фиксированная версия):
@@ -15,7 +20,7 @@ Sedona (fix)
 ![Sedona - hotels](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/sedona-hotels-1200.jpg)
 
 
-Mishka (adaptive)
+<a name="Mishka"></a> Mishka (adaptive)
 ------------
 
 Выпускной проект интенсива "HTML и CSS, 2 уровень" от HTML Academy (финальная проверка - 100%): Мишка (адаптивная версия):
@@ -29,7 +34,7 @@ Mishka (adaptive)
 ![Mishka - form](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/mishka-form-desktop.jpg)
 
 
-Nerds (fix)
+<a name="Nerds"></a> Nerds (fix)
 ------------
 
 Самостоятельный проект по макетам HTML Academy: Nёrds (фиксированная версия):
