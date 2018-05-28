@@ -13,7 +13,7 @@
 <a name="Sedona"></a> Sedona (fix)
 ------------
 
-Выпускной проект интенсива "HTML и CSS, 1 уровень" от HTML Academy (финальная проверка - 100%) - Седона (фиксированная версия):
+Выпускной проект интенсива "HTML и CSS, 1 уровень" от HTML Academy - Седона (фиксированная версия):
 
       https://aliciaketzueki.github.io/sedona%20(fix)/
 
@@ -28,7 +28,7 @@
 <a name="Mishka"></a> Mishka (adaptive)
 ------------
 
-Выпускной проект интенсива "HTML и CSS, 2 уровень" от HTML Academy (финальная проверка - 100%) - Мишка (адаптивная версия):
+Выпускной проект интенсива "HTML и CSS, 2 уровень" от HTML Academy - Мишка (адаптивная версия):
 
       https://aliciaketzueki.github.io/mishka%20(adaptive)/index.html
 
