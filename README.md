@@ -1,7 +1,7 @@
 Sedona (fix)
 ------------
 
-      https://aliciaketzueki.github.io/sedona%20(fix)/
+      <https://aliciaketzueki.github.io/sedona%20(fix)/>
 
 ![Sedona - index](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/sedona-index-1200.jpg)
 ![Sedona - hotels](https://github.com/aliciaketzueki/aliciaketzueki.github.io/raw/master/img/sedona-hotels-1200.jpg)
