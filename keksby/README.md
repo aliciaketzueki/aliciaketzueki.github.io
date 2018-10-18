@@ -1,3 +1,3 @@
 # Keksby
 
-# https://aliciaketzueki.github.io/keksby%20/index.html
+# https://aliciaketzueki.github.io/keksby/
