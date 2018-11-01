@@ -1,0 +1,137 @@
+.main {
+  margin-top: 160px;
+}
+
+.main__block {
+  position: relative;
+}
+
+.main__title {
+  .title(white);
+  font-size: 72px;
+  line-height: 85px;
+  font-weight: 900;
+  padding-left: 73px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.main__video {
+  width: 720px;
+  height: 403px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  background: @dark-blue;
+
+  & img {
+    opacity: 0.5;
+  }
+}
+
+.main__video-button {
+  .button(transparent);
+  width: 123px;
+  height: 86px;
+  position: absolute;
+  z-index: 10;
+  top: 159px;
+  right: 300px;
+}
+
+.main__title {
+  padding-top: 73px;
+  width: 697px;
+}
+
+.main__list {
+  .list();
+  margin-top: 190px;
+  display: flex;
+  flex-wrap: wrap;
+  counter-reset: counter;
+  margin-bottom: 76px;
+}
+
+.main__item {
+  width: 373px;
+  margin-right: 12px;
+  min-height: 312px;
+  background-position: top 55px center;
+  background-repeat: no-repeat;
+  background-size: 373px 217px;
+  margin-bottom: 75px;
+  counter-increment: counter;
+
+  &::before {
+    content: counter(counter, decimal-leading-zero);
+    font-size: 72px;
+    line-height: 111px;
+    font-weight: 900;
+    padding-left: 74px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &--one {
+    background-image: url("../img/main-1.png");
+  }
+
+  &--two {
+    background-image: url("../img/main-2.png");
+  }
+
+  &--three {
+    background-image: url("../img/main-3.png");
+  }
+
+  &--four {
+    background-image: url("../img/main-4.png");
+    margin-bottom: 85px;
+
+    & .main__link {
+      width: 250px;
+    }
+  }
+
+  &--five {
+    background-image: url("../img/main-5.png");
+  }
+
+  &--six {
+    background-image: url("../img/main-6.png");
+
+    & .main__link {
+      width: 210px;
+    }
+  }
+
+  &--seven {
+    background-image: url("../img/main-7.png");
+  }
+
+  &--eight {
+    background-image: url("../img/main-8.png");
+  }
+}
+
+.main__link {
+  .link(white);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 900;
+  margin-left: 79px;
+  position: relative;
+  top: 188px;
+
+  &::after {
+    content: "";
+    width: 7px;
+    height: 11px;
+    display: inline-block;
+    margin-left: 11px;
+    background: url("../img/link.svg");
+  }
+}

@@ -1,0 +1,41 @@
+.brands {
+  background: white;
+  padding-top: 83px;
+  padding-bottom: 35px;
+  background: white url("../img/dot.svg") top center no-repeat;
+}
+
+.brands__title {
+  color: black;
+  font-size: 40px;
+  line-height: 47px;
+
+  &::after {
+    margin-top: 21px;
+    margin-bottom: 24px;
+  }
+}
+
+.brands__description {
+  .paragraph(@grey);
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.brands__list {
+  .list();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 105px;
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
+}
+
+.brands__item {
+  width: 16%;
+  text-align: center;
+}

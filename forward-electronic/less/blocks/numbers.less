@@ -1,0 +1,39 @@
+.numbers {
+  margin-top: 150px;
+}
+
+.numbers__title {
+  &::after {
+    margin-top: 30px;
+    margin-bottom: 75px;
+  }
+}
+
+.numbers__table {
+  width: 846px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.numbers__cell {
+  width: 370px;
+  margin-bottom: 85px;
+}
+
+.numbers__number {
+  background: @gradient;
+  background-clip: text;
+  .paragraph(transparent);
+  font-size: 90px;
+  line-height: 107px;
+  text-shadow: @shadow;
+}
+
+.numbers__text {
+  .paragraph(#9996A2);
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: lowercase;
+}

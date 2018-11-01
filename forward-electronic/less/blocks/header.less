@@ -1,0 +1,26 @@
+.header__tel {
+  &::before {
+    filter: brightness(100);
+  }
+}
+
+.header__button {
+  text-align: center;
+  margin-left: 38px;
+  margin-top: 27px;
+  padding: 20px 0;
+  width: 229px;
+  box-sizing: border-box;
+  border: 3px solid @blue;
+  border-radius: 90px;
+
+  &:hover {
+    background: @gradient;
+    color: white;
+  }
+
+  &:active {
+    color: white;
+    background: @gradient-hover;
+  }
+}

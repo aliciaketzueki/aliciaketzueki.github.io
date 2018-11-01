@@ -1,0 +1,17 @@
+.main-title {
+  .title(white);
+  font-size: 50px;
+  line-height: 59px;
+  font-weight: 900;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 179px;
+    height: 3px;
+    background: @gradient;
+    margin-top: 34px;
+    margin-bottom: 39px;
+  }
+}

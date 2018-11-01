@@ -1,0 +1,64 @@
+.main-head {
+  position: relative;
+}
+
+.main-head__title {
+  .title(white);
+  font-size: 70px;
+  line-height: 83px;
+  font-weight: 900;
+  padding-top: 126px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.main-head__description {
+  background: @gradient;
+  background-clip: text;
+  .paragraph(transparent);
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 900;
+  text-transform: lowercase;
+  margin-bottom: 64px;
+}
+
+.main-head__text {
+  .paragraph(white);
+  line-height: 21px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.main-head form {
+  display: flex;
+  margin-bottom: 34px;
+}
+
+.main-head__input {
+  width: 664px;
+}
+
+.main-head__button {
+  width: 309px;
+  margin-left: -309px;
+}
+
+.main-head__scroll-text {
+  .paragraph(white);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  text-align: center;
+
+  &::after {
+    content: "";
+    width: 37px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: block;
+    background: url("../img/scroll.svg") center no-repeat;
+    background-size: 37px 54px;
+  }
+}

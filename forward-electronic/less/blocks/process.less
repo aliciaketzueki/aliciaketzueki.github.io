@@ -1,0 +1,52 @@
+.process {
+  margin-top: 75px;
+  padding-bottom: 47px;
+}
+
+.process__title {
+  &::after {
+    margin-top: 30px;
+    margin-bottom: 65px;
+  }
+}
+
+.process__list {
+  .list();
+  counter-reset: number;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.process__item {
+  counter-increment: number;
+  box-sizing: border-box;
+  padding-left: 42px;
+  margin-bottom: 63px;
+  width: 50%;
+}
+
+.process__name {
+  .title(white);
+  font-size: 25px;
+  line-height: 39px;
+  font-weight: 900;
+  padding-bottom: 10px;
+  position: relative;
+
+  &::before {
+    content: counter(number);
+    background: @gradient;
+    background-clip: text;
+    color: transparent;
+    text-shadow: @shadow;
+
+    position: absolute;
+    left: -40px;
+  }
+}
+
+.process__description {
+  .paragraph(@grey);
+  width: 410px;
+}

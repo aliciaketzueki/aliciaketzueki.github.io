@@ -1,0 +1,49 @@
+.anchor {
+  .paragraph(white);
+  position: absolute;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg);
+
+  & span {
+    padding: 0 5px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background: @gradient;
+    margin-left: 15px;
+    width: 80px;
+    height: 3px;
+  }
+
+  &--our {
+    bottom: 70px;
+    left: -202px;
+  }
+
+  &--partners {
+    color: black;
+    bottom: -55px;
+    left: -235px;
+  }
+
+  &--team {
+    bottom: -22px;
+    left: -214px;
+  }
+
+  &--process {
+    bottom: -16px;
+    left: -212px;
+  }
+
+  &--contacts {
+    top: 85px;
+    left: 63px;
+  }
+}
