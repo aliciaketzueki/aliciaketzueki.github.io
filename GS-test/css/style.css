@@ -1034,15 +1034,17 @@ img {
   .catalog__grid {
     padding: 0 20px;
   }
-  .catalog__grid ul {
-    display: block;
+  @supports (display: grid) {
+    .catalog__grid ul {
+      grid-template-columns: 1fr;
+    }
   }
-  .catalog__grid li + li {
-    margin-top: 52px;
+  .catalog__grid a {
+    height: 73.4375vw;
   }
   .catalog__grid li {
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 52px;
   }
 }
 
