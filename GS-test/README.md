@@ -1,1 +1,1 @@
-# https://aliciaketzueki.github.io/GS-test/index.html
+# https://aliciaketzueki.github.io/GS-test/
