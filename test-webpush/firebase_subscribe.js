@@ -49,6 +49,14 @@ if ('Notification' in window) {
     $('#subscribe').on('click', function () {
         subscribe();
     });
+
+    $('#delete-token').on('click', function () {
+
+    });
+
+    $('#send-notification').on('click', function () {
+        sendNotification('blabla');
+    });
 }
 
 function subscribe() {
@@ -147,5 +155,3 @@ function sendNotification(notification) {
             console.log('Error retrieving Instance ID token', error);
         });
 }
-
-sendNotification('blabla')
