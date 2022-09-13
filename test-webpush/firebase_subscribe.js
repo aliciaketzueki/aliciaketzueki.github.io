@@ -55,7 +55,10 @@ if ('Notification' in window) {
     });
 
     $('#send-notification').on('click', function () {
-        sendNotification('blabla');
+        sendNotification({
+            'title': 'Test title',
+            'body': 'Test body'
+        });
     });
 }
 
