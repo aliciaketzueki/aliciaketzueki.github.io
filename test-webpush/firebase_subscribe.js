@@ -9,7 +9,6 @@ firebase.initializeApp({
 if ('Notification' in window) {
     var messaging = firebase.messaging();
 
-
     // или проверяем регистрацию
     messaging.onMessage((payload) => {
         navigator.serviceWorker.getRegistration('/firebase-cloud-messaging-push-scope').then((registration) => {
@@ -144,18 +143,15 @@ function sendNotification(notification) {
 
     messaging.getToken()
         .then(function(currentToken) {
-            fetch('https://fcm.googleapis.com/v1/projects/otmetka-d981b/messages:send', {
+            fetch('https://fcm.googleapis.com/fcm/send', {
                 method: 'POST',
                 headers: {
-                    'Authorization': 'Bearer ' + currentToken,
+                    'Authorization': 'key=' + key,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    "message": {
-                        "token": currentToken,
-                        "notification": notification,
-                        "data": notification
-                    }
+                    data: notification,
+                    to: currentToken
                 })
             }).then(function(response) {
                 return response.json();
