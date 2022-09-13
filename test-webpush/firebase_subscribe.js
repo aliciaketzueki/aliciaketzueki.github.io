@@ -1,4 +1,5 @@
 const SENDER_ID = '317882468869';
+import { initializeApp } from 'firebase-admin/app';
 
 firebase.initializeApp({
     messagingSenderId: SENDER_ID
@@ -117,6 +118,26 @@ function setTokenSentToServer(currentToken) {
     );
 }
 
+function getAccessToken() {
+    return new Promise(function(resolve, reject) {
+        const key = require('../placeholders/service-account.json');
+        const jwtClient = new google.auth.JWT(
+            key.client_email,
+            null,
+            key.private_key,
+            SCOPES,
+            null
+        );
+        jwtClient.authorize(function(err, tokens) {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve(tokens.access_token);
+        });
+    });
+}
+
 function sendNotification(notification) {
     var key = 'BDTgbB8JS5WlkOoXp_-28bP5PaK4xzGuR8NGqbLn0lLPVLrbV4GyW6QTz1rT1EviachJrNR-EaYNxzXqA5rKHzs';
 
@@ -124,8 +145,6 @@ function sendNotification(notification) {
 
     messaging.getToken()
         .then(function(currentToken) {
-            console.log('currentToken', currentToken);
-
             fetch('https://fcm.googleapis.com/v1/projects/otmetka-d981b/messages:send', {
                 method: 'POST',
                 headers: {
