@@ -105,3 +105,47 @@ function setTokenSentToServer(currentToken) {
         currentToken ? currentToken : ''
     );
 }
+
+function sendNotification(notification) {
+    var key = 'BDTgbB8JS5WlkOoXp_-28bP5PaK4xzGuR8NGqbLn0lLPVLrbV4GyW6QTz1rT1EviachJrNR-EaYNxzXqA5rKHzs';
+
+    console.log('Send notification', notification);
+
+    messaging.getToken()
+        .then(function(currentToken) {
+            fetch('https://fcm.googleapis.com/fcm/send', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'key=' + key,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    // Firebase loses 'image' from the notification.
+                    // And you must see this: https://github.com/firebase/quickstart-js/issues/71
+                    data: notification,
+                    to: currentToken
+                })
+            }).then(function(response) {
+                return response.json();
+            }).then(function(json) {
+                console.log('Response', json);
+
+                if (json.success === 1) {
+                    console.log('json success');
+                    // massage_row.show();
+                    // massage_id.text(json.results[0].message_id);
+                } else {
+                    console.log('json NOT success');
+                    // massage_row.hide();
+                    // massage_id.text(json.results[0].error);
+                }
+            }).catch(function(error) {
+                console.log(error);
+            });
+        })
+        .catch(function(error) {
+            console.log('Error retrieving Instance ID token', error);
+        });
+}
+
+sendNotification('blabla')
