@@ -32,9 +32,9 @@ if ('Notification' in window) {
 
     // пользователь уже разрешил получение уведомлений
     // подписываем на уведомления если ещё не подписали
-    if (Notification.permission === 'granted') {
-        subscribe();
-    }
+    // if (Notification.permission === 'granted') {
+    //     subscribe();
+    // }
 
     // по клику, запрашиваем у пользователя разрешение на уведомления
     // и подписываем его
@@ -96,6 +96,8 @@ function unsubscribe() {
                     });
 
                     setTokenSentToServer(false);
+
+                    console.log(currentToken);
                 })
                 .catch(function(error) {
                     console.log('Unable to delete token', error);
