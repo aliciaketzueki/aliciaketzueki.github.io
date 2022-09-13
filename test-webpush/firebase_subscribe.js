@@ -10,38 +10,25 @@ if ('Notification' in window) {
     var messaging = firebase.messaging();
 
     // или проверяем регистрацию
-    messaging.onMessage((payload) => {
-        console.log('Message received. ', payload);
+    messaging.onMessage(function(payload) {
+        console.log('Message received', payload);
 
-        navigator.serviceWorker.getRegistration('/firebase-cloud-messaging-push-scope')
-            .then((registration) => {
-                return registration.showNotification(payload.notification.title, payload.notification);
-            })
-            .catch(function(error) {
-                console.log('ServiceWorker registration failed', error);
-            });
+        // register fake ServiceWorker for show notification on mobile devices
+        navigator.serviceWorker.register('/test-webpush/firebase-messaging-sw.js');
+        Notification.requestPermission(function(permission) {
+            if (permission === 'granted') {
+                navigator.serviceWorker.ready.then(function(registration) {
+                    // Copy data object to get parameters in the click handler
+                    payload.data.data = JSON.parse(JSON.stringify(payload.data));
+
+                    registration.showNotification(payload.data.title, payload.data);
+                }).catch(function(error) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed', error);
+                });
+            }
+        });
     });
-
-    // messaging.onMessage(function(payload) {
-    //     console.log('Message received. ', payload);
-    //
-    //
-    //     // регистрируем пустой ServiceWorker каждый раз
-    //     // navigator.serviceWorker.register('firebase-messaging-sw.js');
-    //     navigator.serviceWorker.register('messaging-sw.js');
-    //
-    //     // запрашиваем права на показ уведомлений если еще не получили их
-    //     Notification.requestPermission(function(result) {
-    //         if (result === 'granted') {
-    //             navigator.serviceWorker.ready.then(function(registration) {
-    //                 // теперь мы можем показать уведомление
-    //                 return registration.showNotification(payload.notification.title, payload.notification);
-    //             }).catch(function(error) {
-    //                 console.log('ServiceWorker registration failed', error);
-    //             });
-    //         }
-    //     });
-    // });
 
     // пользователь уже разрешил получение уведомлений
     // подписываем на уведомления если ещё не подписали
