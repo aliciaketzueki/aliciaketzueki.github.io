@@ -124,6 +124,8 @@ function sendNotification(notification) {
 
     messaging.getToken()
         .then(function(currentToken) {
+            console.log('currentToken', currentToken);
+
             fetch('https://fcm.googleapis.com/fcm/send', {
                 method: 'POST',
                 headers: {
