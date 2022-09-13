@@ -11,9 +11,15 @@ if ('Notification' in window) {
 
     // или проверяем регистрацию
     messaging.onMessage((payload) => {
-        navigator.serviceWorker.getRegistration('/firebase-cloud-messaging-push-scope').then((registration) => {
-            registration.showNotification(payload.notification.title, payload.notification);
-        });
+        console.log('Message received. ', payload);
+
+        navigator.serviceWorker.getRegistration('/firebase-cloud-messaging-push-scope')
+            .then((registration) => {
+                return registration.showNotification(payload.notification.title, payload.notification);
+            })
+            .catch(function(error) {
+                console.log('ServiceWorker registration failed', error);
+            });
     });
 
     // messaging.onMessage(function(payload) {
