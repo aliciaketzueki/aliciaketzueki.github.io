@@ -48,8 +48,8 @@ if ('Notification' in window) {
 
     $('#send-notification').on('click', function () {
         sendNotification({
-            'title': 'Test title',
-            'body': 'Test body'
+            'title': 'С Днем Программиста!',
+            'body': 'Привет, Илья. Поздравляю тебя с днем программиста'
         });
     });
 }
@@ -105,18 +105,11 @@ function unsubscribe() {
 function sendTokenToServer(currentToken) {
     if (!isTokenSentToServer(currentToken)) {
         console.log('Отправка токена на сервер...');
-
-        var url = ''; // адрес скрипта на сервере который сохраняет ID устройства
-        $.post(url, { token: currentToken })
-            .done(function(data) {
-                console.log('Токен отправлен на сервер', data);
-                sendNotification({
-                    'title': 'Подписка на уведомления',
-                    'body': 'Спасибо, вы успешно подписались на уведомления!'
-                });
-            });
-
         setTokenSentToServer(currentToken);
+        sendNotification({
+            'title': 'Подписка на уведомления',
+            'body': 'Спасибо, вы успешно подписались на уведомления!'
+        });
     } else {
         console.log('Токен уже отправлен на сервер.');
     }
