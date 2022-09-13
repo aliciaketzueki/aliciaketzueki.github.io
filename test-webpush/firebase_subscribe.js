@@ -50,7 +50,7 @@ if ('Notification' in window) {
     });
 
     $('#delete-token').on('click', function () {
-
+        unsubscribe();
     });
 
     $('#send-notification').on('click', function () {
@@ -84,6 +84,24 @@ function subscribe() {
         })
         .catch(function (err) {
             console.warn('Не удалось получить разрешение на показ уведомлений.', err);
+        });
+}
+
+function unsubscribe() {
+    messaging.getToken()
+        .then(function(currentToken) {
+            messaging.deleteToken(currentToken)
+                .then(function() {
+                    console.log('Token deleted');
+                    setTokenSentToServer(false);
+                    // Once token is deleted update UI.
+                })
+                .catch(function(error) {
+                    console.log('Unable to delete token', error);
+                });
+        })
+        .catch(function(error) {
+            console.log('Error retrieving Instance ID token', error);
         });
 }
 
