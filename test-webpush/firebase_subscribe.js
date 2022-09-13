@@ -1,5 +1,4 @@
 const SENDER_ID = '317882468869';
-import { initializeApp } from 'firebase-admin/app';
 
 firebase.initializeApp({
     messagingSenderId: SENDER_ID
