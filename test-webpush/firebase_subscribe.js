@@ -62,10 +62,6 @@ function subscribe() {
             messaging.getToken()
                 .then(function (currentToken) {
                     console.log(currentToken);
-                    sendNotification({
-                        'title': 'Подписка на уведомления',
-                        'body': 'Спасибо, вы успешно подписались на уведомления!'
-                    });
 
                     if (currentToken) {
                         sendTokenToServer(currentToken);
@@ -90,11 +86,11 @@ function unsubscribe() {
             messaging.deleteToken(currentToken)
                 .then(function() {
                     console.log('Token deleted');
-                    setTokenSentToServer(false);
                     sendNotification({
                         'title': 'Отписка от уведомлений',
-                        'body': 'Вы отписались от уведомлений'
+                        'body': 'Вы отписались от уведомлений, это уведомление - последнее'
                     });
+                    setTokenSentToServer(false);
                 })
                 .catch(function(error) {
                     console.log('Unable to delete token', error);
@@ -111,9 +107,14 @@ function sendTokenToServer(currentToken) {
         console.log('Отправка токена на сервер...');
 
         var url = ''; // адрес скрипта на сервере который сохраняет ID устройства
-        $.post(url, {
-            token: currentToken
-        });
+        $.post(url, { token: currentToken })
+            .done(function(data) {
+                console.log('Токен отправлен на сервер', data);
+                sendNotification({
+                    'title': 'Подписка на уведомления',
+                    'body': 'Спасибо, вы успешно подписались на уведомления!'
+                });
+            });
 
         setTokenSentToServer(currentToken);
     } else {
@@ -134,29 +135,8 @@ function setTokenSentToServer(currentToken) {
     );
 }
 
-function getAccessToken() {
-    return new Promise(function(resolve, reject) {
-        const key = require('../placeholders/service-account.json');
-        const jwtClient = new google.auth.JWT(
-            key.client_email,
-            null,
-            key.private_key,
-            SCOPES,
-            null
-        );
-        jwtClient.authorize(function(err, tokens) {
-            if (err) {
-                reject(err);
-                return;
-            }
-            resolve(tokens.access_token);
-        });
-    });
-}
-
 function sendNotification(notification) {
     var key = 'AAAASgNFigU:APA91bHHecUByz-lDQVtgjm1S8Abo90islHr0Digs_Kq57W9ISbOIng3Zq7kui4F7AeedvnM96n1emqFhZ1QBLQN1LtLlGNTVrDy5_vuO9azp51j5PqCyr17fIJG5kyMkPzswRwh4urj';
-
     console.log('Send notification', notification);
 
     messaging.getToken()
@@ -178,12 +158,8 @@ function sendNotification(notification) {
 
                 if (json.success === 1) {
                     console.log('json success');
-                    // massage_row.show();
-                    // massage_id.text(json.results[0].message_id);
                 } else {
                     console.log('json NOT success');
-                    // massage_row.hide();
-                    // massage_id.text(json.results[0].error);
                 }
             }).catch(function(error) {
                 console.log(error);
