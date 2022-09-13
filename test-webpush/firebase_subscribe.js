@@ -126,17 +126,18 @@ function sendNotification(notification) {
         .then(function(currentToken) {
             console.log('currentToken', currentToken);
 
-            fetch('https://fcm.googleapis.com/fcm/send', {
+            fetch('https://fcm.googleapis.com/v1/projects/otmetka-d981b/messages:send', {
                 method: 'POST',
                 headers: {
-                    'Authorization': 'key=' + key,
+                    'Authorization': 'Bearer ' + currentToken,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    // Firebase loses 'image' from the notification.
-                    // And you must see this: https://github.com/firebase/quickstart-js/issues/71
-                    data: notification,
-                    to: currentToken
+                    "message": {
+                        "token": currentToken,
+                        "notification": notification,
+                        "data": notification
+                    }
                 })
             }).then(function(response) {
                 return response.json();
