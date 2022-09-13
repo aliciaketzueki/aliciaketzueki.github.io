@@ -1,4 +1,7 @@
-// firebase-messaging-sw.js
+// ЭТОТ ФАЙЛ ДЛЯ КОПИРОВАНИЯ КОДА
+// ОРИГИНАЛ ФАЙЛА С ЭТИМ НАЗВАНИЕМ И КОДОМ ДОЛЖЕН ЛЕЖАТЬ В КОРНЕ САЙТА И БЫТЬ ДОСТУПНЫМ ПО АДРЕСУ:
+// https://sitename.ru/firebase-messaging-sw.js
+
 importScripts('https://www.gstatic.com/firebasejs/3.6.8/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/3.6.8/firebase-messaging.js');
 

@@ -62,6 +62,10 @@ function subscribe() {
             messaging.getToken()
                 .then(function (currentToken) {
                     console.log(currentToken);
+                    sendNotification({
+                        'title': 'Подписка на уведомления',
+                        'body': 'Спасибо, вы успешно подписались на уведомления!'
+                    });
 
                     if (currentToken) {
                         sendTokenToServer(currentToken);
@@ -87,7 +91,10 @@ function unsubscribe() {
                 .then(function() {
                     console.log('Token deleted');
                     setTokenSentToServer(false);
-                    // Once token is deleted update UI.
+                    sendNotification({
+                        'title': 'Отписка от уведомлений',
+                        'body': 'Вы отписались от уведомлений'
+                    });
                 })
                 .catch(function(error) {
                     console.log('Unable to delete token', error);
