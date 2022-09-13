@@ -49,7 +49,9 @@ if ('Notification' in window) {
     $('#send-notification').on('click', function () {
         sendNotification({
             'title': 'С Днем Программиста!',
-            'body': 'Привет, Илья. Поздравляю тебя с днем программиста'
+            'body': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'icon': 'image/jpeg',
+            'click_action': 'https://makeit-da.ru/'
         });
     });
 }
@@ -88,7 +90,9 @@ function unsubscribe() {
                     console.log('Token deleted');
                     sendNotification({
                         'title': 'Отписка от уведомлений',
-                        'body': 'Вы отписались от уведомлений, это уведомление - последнее'
+                        'body': 'Вы отписались от уведомлений, это уведомление - последнее',
+                        'icon': 'image/jpeg',
+                        'click_action': 'https://makeit-da.ru/'
                     });
                     setTokenSentToServer(false);
                 })
@@ -108,7 +112,9 @@ function sendTokenToServer(currentToken) {
         setTokenSentToServer(currentToken);
         sendNotification({
             'title': 'Подписка на уведомления',
-            'body': 'Спасибо, вы успешно подписались на уведомления!'
+            'body': 'Спасибо, вы успешно подписались на уведомления!',
+            'icon': 'image/jpeg',
+            'click_action': 'https://makeit-da.ru/'
         });
     } else {
         console.log('Токен уже отправлен на сервер.');
