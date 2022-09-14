@@ -52,7 +52,7 @@ if ('Notification' in window) {
         sendNotification({
             'title': 'Заголовок уведомления',
             'body': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            'icon': 'image.jpeg',
+            'icon': 'image3.jpg',
             'click_action': 'https://makeit-da.ru/'
         });
     });
@@ -116,7 +116,7 @@ function sendTokenToServer(currentToken) {
         sendNotification({
             'title': 'Подписка на уведомления',
             'body': 'Спасибо, вы успешно подписались на уведомления!',
-            'icon': 'image.jpeg',
+            'icon': 'image2.jpg',
             'click_action': 'https://makeit-da.ru/'
         });
     } else {
