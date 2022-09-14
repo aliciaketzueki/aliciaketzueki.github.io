@@ -91,18 +91,13 @@ function unsubscribe() {
                 .then(function() {
                     console.log('Token deleted');
                     sendNotification({
-                        'title': 'Отписка от уведомлений',
-                        'body': 'Вы отписались от уведомлений, это уведомление - последнее',
+                        'title': 'Токен удален',
+                        'body': 'Однако нельзя так просто взять и снять разрешение на показ уведомлений',
                         'icon': 'image.jpeg',
                         'click_action': 'https://makeit-da.ru/'
                     });
 
                     setTokenSentToServer(false);
-
-                    Notification.requestPermission(function(permission) {
-                        permission
-                    });
-
                 })
                 .catch(function(error) {
                     console.log('Unable to delete token', error);
