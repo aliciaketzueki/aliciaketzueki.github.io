@@ -16,6 +16,8 @@ if ('Notification' in window) {
         // register fake ServiceWorker for show notification on mobile devices
         navigator.serviceWorker.register('/test-webpush/firebase-messaging-sw.js');
         Notification.requestPermission(function(permission) {
+            console.log('permission', permission);
+
             if (permission === 'granted') {
                 navigator.serviceWorker.ready.then(function(registration) {
                     // Copy data object to get parameters in the click handler
@@ -32,9 +34,9 @@ if ('Notification' in window) {
 
     // пользователь уже разрешил получение уведомлений
     // подписываем на уведомления если ещё не подписали
-    // if (Notification.permission === 'granted') {
-    //     subscribe();
-    // }
+    if (Notification.permission === 'granted') {
+        subscribe();
+    }
 
     // по клику, запрашиваем у пользователя разрешение на уведомления
     // и подписываем его
