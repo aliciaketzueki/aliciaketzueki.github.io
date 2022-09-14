@@ -2,17 +2,17 @@
 
 $url = 'https://fcm.googleapis.com/fcm/send';
 $YOUR_API_KEY = 'AAAASgNFigU:APA91bHHecUByz-lDQVtgjm1S8Abo90islHr0Digs_Kq57W9ISbOIng3Zq7kui4F7AeedvnM96n1emqFhZ1QBLQN1LtLlGNTVrDy5_vuO9azp51j5PqCyr17fIJG5kyMkPzswRwh4urj'; // Server key
-$YOUR_TOKEN_ID = 'ePGDW707Slo:APA91bH-02IkrO9I8po4AckGiRLa-NoQ-GYP90T4_URFwRY3hc2mfkf--6Zc3feq0bfRKMPyz9PZ3eIb34Bl6AFBg16VQ7YZAnCb3TY8-05R6eQkuCRXvcEduhQPm1Cmths-hPkBhuzH'; // Client token id
+$YOUR_TOKEN_ID = 'ffkwS-99I_E:APA91bEJLDv5ifD6ZWPI6PPokRnquRfK1h1rlUprpNOs7VTwAMLnyFEjRQslqjbHe2PzItjt_qmaHD-nqxwh92M6zpNAliuTO8kDVIaeP8ozU_HiNk92RJtG8jQNSMudbEbaMG5HcyOi'; // Client token id
 
-$request_body = [
+$request_body = array(
     'to' => $YOUR_TOKEN_ID,
     'notification' => [
         'title' => 'Заголовок уведомления',
-        'body' => sprintf('Начало в %s.', date('H:i')),
+        'body' => 'Текст уведомления',
         'icon' => '',
         'click_action' => 'https://makeit-da.ru/'
     ]
-];
+);
 $fields = json_encode($request_body);
 
 $request_headers = [
