@@ -99,7 +99,10 @@ function unsubscribe() {
 
                     setTokenSentToServer(false);
 
-                    console.log(currentToken);
+                    // Notification.requestPermission(function(permission) {
+                    //
+                    // });
+
                 })
                 .catch(function(error) {
                     console.log('Unable to delete token', error);
@@ -133,10 +136,11 @@ function isTokenSentToServer(currentToken) {
 }
 
 function setTokenSentToServer(currentToken) {
-    window.localStorage.setItem(
-        'sentFirebaseMessagingToken',
-        currentToken ? currentToken : ''
-    );
+    if (currentToken) {
+        window.localStorage.setItem('sentFirebaseMessagingToken', currentToken);
+    } else {
+        window.localStorage.removeItem('sentFirebaseMessagingToken');
+    }
 }
 
 function sendNotification(notification) {
